@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "set NODE_ENV=development && ts-node-dev --respawn --transpile-only src/server.ts",
-    "prod": "npm run build && node dist/server.js",
+    "prod": "npm run prisma:migrate && npm run build && node dist/server.js",
     "build": "tsc",
     "prisma:generate": "npx prisma generate",
     "prisma:migrate": "npx prisma migrate dev",
